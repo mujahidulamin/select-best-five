@@ -1,0 +1,18 @@
+/* body part */
+body{
+    overflow-x: hidden;
+}
+
+/* header part */
+.header-title{
+    color: #FF5E19;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.logo-img{
+    margin-top: 4rem;
+}
+
+.img-football{
+    margin-top: 15rem;
+}
