@@ -16,3 +16,22 @@ body{
 .img-football{
     margin-top: 15rem;
 }
+
+/* main part */
+.bg-main{
+    background-color: #0D0D0D;
+}
+
+.dot-small{
+    font-size: 5px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.btn-blue{
+    background-color: #015196;
+    color: white;
+}
+
+.total{
+    color: #FF5E19;
+}
