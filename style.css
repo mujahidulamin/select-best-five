@@ -35,3 +35,9 @@ body{
 .total{
     color: #FF5E19;
 }
+
+/* footer part */
+
+.footer-bg{
+    background-color: #0D0D0D !important;
+}
