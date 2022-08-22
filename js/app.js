@@ -2,7 +2,13 @@ function getName(nameId) {
     const neymarName = document.getElementById(nameId);
     const getNeymarNameText = neymarName.innerText;
 
-    
+    const listLi = document.querySelectorAll('#ol-container li');
+    const listLength = listLi.length;
+
+    if (listLength >= 5) {
+        alert('You Can not add more than five players');
+        return;
+    }
 
     const olElementText = document.getElementById('ol-container');
     const li = document.createElement('li');
@@ -13,7 +19,7 @@ function getName(nameId) {
 
 
 //All Event select button handler
-document.getElementById('select-btn-1').addEventListener('click', function() {
+document.getElementById('select-btn-1').addEventListener('click', function () {
     // get the player name by calling the get name function
     getName('neymar-name');
     disableBtn('select-btn-1');
