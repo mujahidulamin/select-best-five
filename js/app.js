@@ -75,6 +75,33 @@ document.getElementById('calculate-per-player').addEventListener('click', functi
     }
 })
 
+// total budget calculate button event handler
+document.getElementById('budget-total-btn').addEventListener('click', function () {
+
+    //Get the total expense of per player
+    const perPlayerExpenseText = document.getElementById('total-player-expense');
+    const perPlayerExpenseTextString = perPlayerExpenseText.innerText;
+    const perPlayerExpense = parseFloat(perPlayerExpenseTextString);
+
+
+    //Get the manager input field 
+    const managerFieldElement = document.getElementById('manager-feild')
+    const managerFieldElementString = managerFieldElement.value;
+    const managerField = parseFloat(managerFieldElementString);
+
+    //Get the coach input field 
+    const coachFieldElement = document.getElementById('coach-field');
+    const coachFieldElementString = coachFieldElement.value;
+    const coachField = parseFloat(coachFieldElementString);
+
+    //Total Budget Expenses calculate
+    const totalBudget = managerField + coachField + perPlayerExpense;
+    console.log(totalBudget);
+
+    //Get the total budget expense and set the budget expense
+    const totalBudgetExpenseText = document.getElementById('total-budget-expense');
+    totalBudgetExpenseText.innerText = totalBudget;
+})
 
 
 
