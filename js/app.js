@@ -1,4 +1,3 @@
-
 //select event handler common function
 function getName(nameId) {
     const neymarName = document.getElementById(nameId);
@@ -19,7 +18,7 @@ function getName(nameId) {
 }
 
 //disabled common function
-function disableBtn(selectDiasbleBtn){
+function disableBtn(selectDiasbleBtn) {
     const disableBtn = document.getElementById(selectDiasbleBtn);
     disableBtn.setAttribute('disabled', 'disabled');
 }
@@ -30,6 +29,7 @@ function disableBtn(selectDiasbleBtn){
 document.getElementById('select-btn-1').addEventListener('click', function () {
     // get the player name by calling the get name function
     getName('neymar-name');
+    // disble the select button by calling the disable btn function
     disableBtn('select-btn-1');
 });
 
@@ -37,32 +37,36 @@ document.getElementById('select-btn-1').addEventListener('click', function () {
 document.getElementById('select-btn-2').addEventListener('click', function () {
     // get the player name by calling the get name function
     getName('messi-name');
+    // disble the select button by calling the disable btn function
     disableBtn('select-btn-2');
 });
 
 document.getElementById('select-btn-3').addEventListener('click', function () {
     // get the player name by calling the get name function
     getName('mbappe-name');
+    // disble the select button by calling the disable btn function
     disableBtn('select-btn-3');
 });
 
 document.getElementById('select-btn-4').addEventListener('click', function () {
     // get the player name by calling the get name function
     getName('vitor-name');
+    // disble the select button by calling the disable btn function
     disableBtn('select-btn-4');
 });
 
 document.getElementById('select-btn-5').addEventListener('click', function () {
     // get the player name by calling the get name function
     getName('sergio-name');
+    // disble the select button by calling the disable btn function
     disableBtn('select-btn-5');
 });
 document.getElementById('select-btn-6').addEventListener('click', function () {
     // get the player name by calling the get name function
     getName('renato-name');
+    // disble the select button by calling the disable btn function
     disableBtn('select-btn-6');
 });
-
 
 
 document.getElementById('calculate-per-player').addEventListener('click', function () {
@@ -73,6 +77,13 @@ document.getElementById('calculate-per-player').addEventListener('click', functi
         const perPlayerExpenseField = document.getElementById('per-player-expense-field');
         const perPlayerExpenseString = perPlayerExpenseField.value;
         const perPlayerExpense = parseFloat(perPlayerExpenseString);
+
+        // error handeling
+
+        if (perPlayerExpense < 0 || isNaN(perPlayerExpense)) {
+            alert('Please Enter a Positeve Number');
+            return perPlayerExpenseField.value = '';
+        }
 
         //calculate the per player expense
         const perPlayerExpenseTotal = element * perPlayerExpense;
@@ -97,10 +108,23 @@ document.getElementById('budget-total-btn').addEventListener('click', function (
     const managerFieldElementString = managerFieldElement.value;
     const managerField = parseFloat(managerFieldElementString);
 
+    // error handeling
+    if (managerField < 0 || isNaN(managerField)) {
+        alert('Please Enter a Positeve Number');
+        return managerFieldElement.value = '';
+    }
+
     //Get the coach input field 
     const coachFieldElement = document.getElementById('coach-field');
     const coachFieldElementString = coachFieldElement.value;
     const coachField = parseFloat(coachFieldElementString);
+
+    // error handeling
+    if (coachField < 0 || isNaN(coachField)) {
+        alert('Please Enter a Positeve Number');
+        return coachFieldElement.value = '';
+    }
+
 
     //Total Budget Expenses calculate
     const totalBudget = managerField + coachField + perPlayerExpense;
