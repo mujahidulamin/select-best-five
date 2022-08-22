@@ -1,3 +1,5 @@
+
+//select event handler common function
 function getName(nameId) {
     const neymarName = document.getElementById(nameId);
     const getNeymarNameText = neymarName.innerText;
@@ -14,6 +16,12 @@ function getName(nameId) {
     const li = document.createElement('li');
     li.innerText = getNeymarNameText;
     olElementText.appendChild(li);
+}
+
+//disabled common function
+function disableBtn(selectDiasbleBtn){
+    const disableBtn = document.getElementById(selectDiasbleBtn);
+    disableBtn.setAttribute('disabled', 'disabled');
 }
 
 
