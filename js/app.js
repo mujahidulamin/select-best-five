@@ -81,7 +81,7 @@ document.getElementById('calculate-per-player').addEventListener('click', functi
         // error handeling
 
         if (perPlayerExpense < 0 || isNaN(perPlayerExpense)) {
-            alert('Please Enter a Positeve Number');
+            alert('Invalid! Please Enter a Positeve Number');
             return perPlayerExpenseField.value = '';
         }
 
@@ -110,7 +110,7 @@ document.getElementById('budget-total-btn').addEventListener('click', function (
 
     // error handeling
     if (managerField < 0 || isNaN(managerField)) {
-        alert('Please Enter a Positeve Number');
+        alert('Invalid! Please Enter a Positeve Number');
         return managerFieldElement.value = '';
     }
 
@@ -121,7 +121,7 @@ document.getElementById('budget-total-btn').addEventListener('click', function (
 
     // error handeling
     if (coachField < 0 || isNaN(coachField)) {
-        alert('Please Enter a Positeve Number');
+        alert('Invalid! Please Enter a Positeve Number');
         return coachFieldElement.value = '';
     }
 
