@@ -1,43 +1,44 @@
 /* body part */
-body{
+body {
     overflow-x: hidden;
 }
 
 /* header part */
-.header-title{
+.header-title {
     color: #FF5E19;
     font-family: 'Berkshire Swash', cursive;
 }
 
-.logo-img{
+.logo-img {
     margin-top: 4rem;
 }
 
-.img-football{
+.img-football {
     margin-top: 15rem;
 }
 
 /* main part */
-.bg-main{
+.bg-main {
     background-color: #0D0D0D;
 }
 
-.dot-small{
+.dot-small {
     font-size: 5px;
     margin-left: 4px;
     margin-right: 4px;
 }
-.btn-blue{
+
+.btn-blue {
     background-color: #015196;
     color: white;
 }
 
-.total{
+.total {
     color: #FF5E19;
 }
 
 /* footer part */
 
-.footer-bg{
+.footer-bg {
     background-color: #0D0D0D !important;
 }
